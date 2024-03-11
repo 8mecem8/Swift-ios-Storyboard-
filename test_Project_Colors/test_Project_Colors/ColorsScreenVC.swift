@@ -7,8 +7,14 @@
 
 import UIKit
 
-class ColorsScreenVC: UIViewController {
-
+class ColorsScreenVC: UIViewController
+{
+    let colorsArray:[Any] = (0...50).map 
+    { 
+        _ -> UIColor in
+        UIColor(red: CGFloat.random(in: 0...1), green: CGFloat.random(in: 0...1), blue: CGFloat.random(in: 0...1), alpha: CGFloat.random(in: 0.6...1))
+    }
+    
     override func viewDidLoad(){super.viewDidLoad()}
     
     
@@ -20,17 +26,30 @@ class ColorsScreenVC: UIViewController {
     
     
     
-    
-    
+}
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension ColorsScreenVC: UITableViewDelegate,UITableViewDataSource
+{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int 
+    {
+        return colorsArray.count
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell 
+    {
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CelltoColor") 
+        else { return UITableViewCell()}
+        
+        cell.backgroundColor = colorsArray[indexPath.row] as? UIColor
+        print(tableView)
+        print(indexPath)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) 
+    {
+        performSegue(withIdentifier: "MoveToDetailsForColors", sender: nil)
+    }
 }
