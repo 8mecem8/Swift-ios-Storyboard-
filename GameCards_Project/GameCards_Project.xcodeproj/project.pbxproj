@@ -13,6 +13,7 @@
 		3F2414452BA0902C00AC50CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F2414442BA0902C00AC50CB /* Assets.xcassets */; };
 		3F2414482BA0902C00AC50CB /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 3F2414472BA0902C00AC50CB /* Base */; };
 		3F24146C2BA090D000AC50CB /* CardSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F24146B2BA090D000AC50CB /* CardSelectionVC.swift */; };
+		3F24146E2BA0D39100AC50CB /* DeckofCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F24146D2BA0D39100AC50CB /* DeckofCards.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		3F24144E2BA0902D00AC50CB /* GameCards_ProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameCards_ProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F2414582BA0902D00AC50CB /* GameCards_ProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameCards_ProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F24146B2BA090D000AC50CB /* CardSelectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSelectionVC.swift; sourceTree = "<group>"; };
+		3F24146D2BA0D39100AC50CB /* DeckofCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckofCards.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				3F2414442BA0902C00AC50CB /* Assets.xcassets */,
 				3F2414462BA0902C00AC50CB /* LaunchScreen.storyboard */,
 				3F2414492BA0902C00AC50CB /* Info.plist */,
+				3F24146D2BA0D39100AC50CB /* DeckofCards.swift */,
 			);
 			path = GameCards_Project;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F24143C2BA0902800AC50CB /* AppDelegate.swift in Sources */,
+				3F24146E2BA0D39100AC50CB /* DeckofCards.swift in Sources */,
 				3F24143E2BA0902800AC50CB /* SceneDelegate.swift in Sources */,
 				3F24146C2BA090D000AC50CB /* CardSelectionVC.swift in Sources */,
 			);
