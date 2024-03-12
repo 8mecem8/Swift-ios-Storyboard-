@@ -17,11 +17,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="GZF-pH-Wcf">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="GZF-pH-Wcf">
                                 <rect key="frame" x="0.0" y="103" width="393" height="749"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CelltoColor" id="1Om-Ng-dGp">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CelltoColor" id="1Om-Ng-dGp">
                                         <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1Om-Ng-dGp" id="7X6-Bx-C4t">
@@ -38,12 +39,6 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CWe-IB-ufl"/>
                         <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="GZF-pH-Wcf" firstAttribute="leading" secondItem="CWe-IB-ufl" secondAttribute="leading" id="7Uk-UH-YE6"/>
-                            <constraint firstItem="CWe-IB-ufl" firstAttribute="trailing" secondItem="GZF-pH-Wcf" secondAttribute="trailing" id="8N4-50-QH3"/>
-                            <constraint firstItem="CWe-IB-ufl" firstAttribute="bottom" secondItem="GZF-pH-Wcf" secondAttribute="bottom" id="CUi-u1-EVa"/>
-                            <constraint firstItem="GZF-pH-Wcf" firstAttribute="top" secondItem="CWe-IB-ufl" secondAttribute="top" id="fOT-qp-KMq"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title: Color" id="hJv-qg-zdR"/>
                     <connections>

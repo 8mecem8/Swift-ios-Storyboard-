@@ -12,7 +12,7 @@ class ColorsScreenVC: UIViewController
     let colorsArray:[Any] = (0...50).map 
     { 
         _ -> UIColor in
-        UIColor(red: CGFloat.random(in: 0...1), green: CGFloat.random(in: 0...1), blue: CGFloat.random(in: 0...1), alpha: CGFloat.random(in: 0.6...1))
+        UIColor(red: CGFloat.random(in: 0...1), green: CGFloat.random(in: 0...1), blue: CGFloat.random(in: 0...1), alpha: CGFloat.random(in: 0.3...0.7))
     }
     
     override func viewDidLoad(){super.viewDidLoad()}
@@ -24,7 +24,12 @@ class ColorsScreenVC: UIViewController
     }*/
     
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        let desVC = segue.destination as! DetailsForColorsVC
+        desVC.color = sender as? UIColor
     
+    }
     
 }
 
@@ -43,13 +48,18 @@ extension ColorsScreenVC: UITableViewDelegate,UITableViewDataSource
         else { return UITableViewCell()}
         
         cell.backgroundColor = colorsArray[indexPath.row] as? UIColor
-        print(tableView)
-        print(indexPath)
+        cell.textLabel?.text  = "row number \(indexPath.row) 📊"
+        
+        //print(tableView);print(cell);print(indexPath)
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) 
     {
-        performSegue(withIdentifier: "MoveToDetailsForColors", sender: nil)
+        
+        performSegue(withIdentifier: "MoveToDetailsForColors", sender: colorsArray[indexPath.row])
     }
+    
+    
 }
