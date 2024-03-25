@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -23,7 +24,7 @@
                                     <constraint firstAttribute="width" constant="250" id="ksN-iI-mai"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fe3-AQ-Nnq">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fe3-AQ-Nnq">
                                 <rect key="frame" x="66.666666666666686" y="602" width="260" height="60"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <constraints>
@@ -31,9 +32,12 @@
                                     <constraint firstAttribute="height" constant="60" id="BA4-O1-zyF"/>
                                 </constraints>
                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Stop!">
-                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Stop!">
+                                    <imageReference key="image" image="stop.circle.fill" catalog="system" variableValue="0.0"/>
+                                </state>
+                                <buttonConfiguration key="configuration" style="tinted" title="Stop!" imagePadding="5">
+                                    <imageReference key="image" image="stop.circle.fill" catalog="system" variableValue="0.0"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="stopButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qcZ-oR-kgn"/>
@@ -48,8 +52,8 @@
                                 </constraints>
                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Restart!">
-                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrow.clockwise.circle.fill" catalog="system" title="Restart" imagePadding="5">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="17"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="restartButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VWi-jH-Ytt"/>
@@ -64,7 +68,7 @@
                                 </constraints>
                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Rules">
+                                <buttonConfiguration key="configuration" style="plain" image="list.bullet.clipboard" catalog="system" title="Rules" imagePadding="6">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -147,6 +151,9 @@
     </scenes>
     <resources>
         <image name="10C" width="691" height="1056"/>
+        <image name="arrow.clockwise.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="list.bullet.clipboard" catalog="system" width="98" height="128"/>
+        <image name="stop.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -21,7 +21,7 @@ class CardSelectionVC: UIViewController
         super.viewDidLoad()
         
         //Style UI elements
-        for item in Buttons{item.layer.cornerRadius = 8}
+        for item in Buttons{item.layer.cornerRadius = 18}
         
         StartTimer()
     }
