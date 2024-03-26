@@ -14,7 +14,7 @@ class indexVC: UIViewController
     @IBOutlet var mainButton: UIButton!
     
     
-    override func viewDidLoad() {super.viewDidLoad()}
+    override func viewDidLoad() {super.viewDidLoad();updateUI();}
 
     fileprivate func updateUI() {
         if !isLighton {
